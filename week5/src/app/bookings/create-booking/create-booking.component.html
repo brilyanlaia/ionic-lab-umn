@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    
+    <ion-title text-center>{{selectedPlace.title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item>
+          <img [src]="selectedPlace.imageUrl">
+        </ion-item>
+        <ion-item>
+          {{selectedPlace.description}}
+        </ion-item>
+        <ion-item>
+          {{selectedPlace.price | currency}}
+        </ion-item>
+      </ion-list>
+  <ion-button (click)="bookThisPlace()">Book</ion-button>
+  <ion-button (click)="cancel()">Cancel</ion-button>
+</ion-content>
